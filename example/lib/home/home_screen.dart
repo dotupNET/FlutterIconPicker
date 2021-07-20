@@ -29,12 +29,13 @@ class _HomeScreenState extends State<HomeScreen> {
   _pickIcon() async {
     IconData icon = await FlutterIconPicker.showIconPicker(
       context,
+      mainAxisSpacing: 40,
       adaptiveDialog: isAdaptive,
       showTooltips: showTooltips,
       showSearchBar: showSearch,
       iconPickerShape:
           RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-      iconPackMode: IconPack.cupertino,
+      iconPackMode: IconPack.material,
     );
 
     if (icon != null) {
